@@ -1,0 +1,12 @@
+name = "book"
+description = "A book theme inspired from GitBook/mdBook"
+license = "MIT"
+homepage = "https://github.com/Keats/book"
+min_version = "0.2"
+
+[extra]
+
+
+[author]
+name = "Vincent Prouillet"
+homepage = "https://vincent.is"

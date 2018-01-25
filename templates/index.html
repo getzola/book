@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="{{ get_url(path="book.css") }}">
+
+      {% block extra_head %}
+      {% endblock extra_head %}
+    </head>
+
+    <body>
+        <div class="menu">
+            {% block before_menu %}
+            {% endblock before_menu %}
+            <nav role="navigation">
+                <ul>
+                    {% block menu %}
+                        {% set index = get_section(path="_index.md") %}
+                        {% for subsection in index.subsections %}
+                            <li class="{% if current_path == subsection.path %}active{% endif %}">
+                                <a href="{{ subsection.permalink }}">{{ subsection.title }}</a>
+                                {% if subsection.pages %}
+                                    <ul>
+                                        {% for page in subsection.pages %}
+                                            <li class="{% if current_path == page.path %}active{% endif %}">
+                                                <a href="{{ page.permalink }}">{{ page.title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    {% endblock menu %}
+                </ul>
+            </nav>
+            {% block after_menu %}
+            {% endblock after_menu %}
+        </div>
+
+        <div class="page">
+            <div class="page__inner">
+                <div class="page__menu">
+                    TODO
+                </div>
+
+                <div class="page__content">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+
+                {% block prev_link %}
+                {% endblock prev_link %}
+
+                {% block next_link %}
+                {% endblock next_link %}
+            </div>
+        </div>
+    </body>
+
+</html>
