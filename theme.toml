@@ -5,7 +5,7 @@ homepage = "https://github.com/Keats/book"
 min_version = "0.2"
 
 [extra]
-
+number_chapters = true
 
 [author]
 name = "Vincent Prouillet"

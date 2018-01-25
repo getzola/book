@@ -6,9 +6,10 @@
   color: #000;
   background: #fff;
   padding-bottom: 20px;
+  transition: 0.5s;
 
   .gutenberg-anchor {
-    color: #008cff;
+    color: #4183c4;
     padding-left: 10px;
     text-decoration: none;
     font-weight: initial;
@@ -22,16 +23,52 @@
     max-width: 100%;
   }
 
-  &__inner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow-y: auto;
-  }
-
   &__content {
+    a {
+      color: #4183c4;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    hr {
+      height: 4px;
+      padding: 0;
+      margin: 1.7em 0;
+      overflow: hidden;
+      background-color: #e7e7e7;
+      border: none;
+    }
+
+    pre {
+      padding: 1rem;
+
+      span {
+        white-space: pre-wrap;
+      }
+    }
+
+    blockquote {
+      margin: 0;
+      margin-bottom: .85em;
+      padding: 0 15px;
+      color: #858585;
+      border-left: 4px solid #e5e5e5;
+    }
+
+    code {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+      color: #6e6b5e;
+      background: #f1f1f1;
+      font-size: 0.875em;
+      font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+    }
+
     font-size: 1.6rem;
     word-wrap: break-word;
     line-height: 1.7;
@@ -73,7 +110,8 @@
   }
 
   .next {
-    right: 0;
+    // not 0 as it goes over the sidebar otherwise
+    right: 15px;
   }
 
   @include max-screen(1250px) {
@@ -83,6 +121,10 @@
       display: inline-block;
       max-width: 49%;
       width: 49%;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -91,4 +133,9 @@
   .page {
     left: $sidebar-width;
   }
+}
+
+.page-without-menu {
+  width: 100%;
+  left: 0;
 }

@@ -5,3 +5,4 @@ description = "A book theme"
 highlight_code = true
 
 [extra]
+number_chapters = true

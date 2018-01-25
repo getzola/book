@@ -21,13 +21,6 @@ body {
   letter-spacing: 0.2px;
 }
 
-pre {
-  padding: 1rem;
-
-  span {
-    white-space: pre-wrap;
-  }
-}
 
 @mixin min-screen($min-width: $body-width) {
    @media screen and (min-width: $min-width) {
@@ -45,3 +38,4 @@ $sidebar-width: 300px;
 
 @import "navigation";
 @import "content";
+@import "header";
