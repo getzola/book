@@ -40,9 +40,11 @@
 }
 
 .menu-hidden {
-  width: 0px;
+  width: 0;
 }
 
 @include max-screen(600px) {
-  display: none;
+  .menu {
+    width: 0;
+  }
 }

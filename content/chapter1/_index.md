@@ -5,7 +5,7 @@ sort_by = "order"
 insert_anchor_links = "right"
 +++
 
-Some words to introduce the book.
+Some words to introduce the book with a long enough sentence.
 
 > This is a quote 
 

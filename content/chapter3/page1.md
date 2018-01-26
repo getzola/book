@@ -5,6 +5,12 @@ order = 1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar, sem id fermentum sollicitudin, velit sem elementum nisl, at tempus odio lectus eu sapien. Quisque ligula diam, cursus sed nisi et, ultricies rhoncus diam. Integer nec tellus a ante dapibus tincidunt nec id lacus. Quisque eu aliquet dui. Etiam placerat, ex in luctus lobortis, sem augue pellentesque nulla, in gravida lacus dui id arcu. Nam vel metus a ipsum condimentum porta non quis purus. Nullam feugiat vitae felis eu imperdiet. Sed et faucibus ligula.
 
+```js
+function isAllowed(user) {
+  return user.admin || user.staff;
+}
+```
+
 Morbi tempus semper tellus eget luctus. Morbi eu dui leo. Aliquam vel neque id risus laoreet pellentesque. In mattis tincidunt nulla, sit amet pharetra tellus facilisis vel. Nulla facilisi. Nunc blandit massa a ante interdum pulvinar. Suspendisse bibendum efficitur gravida. Praesent gravida urna a luctus molestie. Fusce accumsan ipsum elit, quis gravida urna condimentum sed. Aliquam erat volutpat. Quisque eget mollis lorem, sit amet ultricies mauris. Fusce vulputate sollicitudin magna eget facilisis. Nunc id dignissim sapien.
 
 Nulla pharetra eget ligula vitae auctor. Praesent consectetur consectetur nunc, quis commodo arcu posuere tincidunt. Praesent auctor, augue ut tincidunt semper, dolor ex malesuada justo, sit amet feugiat velit leo a lectus. Curabitur et velit ut magna vulputate vehicula nec sed lorem. Ut rutrum, odio sit amet mollis scelerisque, enim arcu euismod odio, vel faucibus libero ex sit amet nisl. Proin nec orci nec elit vehicula sodales id eget ex. Etiam et aliquet lacus. Cras tortor orci, blandit nec eleifend nec, venenatis at nibh. Vivamus eu feugiat purus. Nam viverra lobortis dui, non eleifend mauris commodo eget. Vestibulum quis erat et turpis maximus pretium. Aenean ac placerat quam. Nulla elit tortor, ornare a libero non, eleifend vestibulum nulla. Donec justo lorem, accumsan a feugiat ullamcorper, fringilla vel augue. Sed convallis et odio rhoncus vestibulum. Vivamus finibus lacinia dui, volutpat tincidunt felis condimentum et.

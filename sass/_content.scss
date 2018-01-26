@@ -76,7 +76,7 @@
     left: 0;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px 15px 40px 15px;
+    padding: 0 15px 40px;
 
     p {
       margin-top: 0;
@@ -107,11 +107,13 @@
 
   .previous {
     left: $sidebar-width;
+    float: left;
   }
 
   .next {
     // not 0 as it goes over the sidebar otherwise
     right: 15px;
+    float: right;
   }
 
   @include max-screen(1250px) {
@@ -138,4 +140,11 @@
 .page-without-menu {
   width: 100%;
   left: 0;
+}
+
+@include max-screen(600px) {
+  .page {
+    width: 100%;
+    left: 0;
+  }
 }
