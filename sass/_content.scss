@@ -69,6 +69,29 @@
       font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
     }
 
+    iframe {
+      border: 0;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      border-color: #cccccc;
+
+      td {
+        padding: 3px 20px;
+        border: 1px solid #ccc;
+      }
+
+      thead {
+        th {
+          padding: 6px 13px;
+          font-weight: bold;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+
     font-size: 1.6rem;
     word-wrap: break-word;
     line-height: 1.7;
