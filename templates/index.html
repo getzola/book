@@ -68,6 +68,12 @@
 
             <div class="page__content">
                 {% block content %}
+                  {% if section.content %}
+                    {{ section.content | safe }}
+                  {% else %}
+                    {# the content of the following subsection #}
+                    {{ index.subsections[0].content | safe }}
+                  {% endif %}
                 {% endblock content %}
             </div>
 
