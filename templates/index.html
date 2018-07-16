@@ -38,7 +38,7 @@
                                 </a>
                                 {% if subsection.pages %}
                                     <ul>
-                                        {% for page in subsection.pages %}
+                                        {% for page in subsection.pages | reverse %}
                                             <li {% if current_path == page.path %}class="active"{% endif %}>
                                                 <a href="{{ page.permalink }}">
                                                     {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.{{ loop.index }}.</strong>{% endif %}
