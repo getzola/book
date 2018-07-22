@@ -25,6 +25,20 @@ and then enable it in your `config.toml`:
 theme = "book"
 ```
 
+## Usage
+To ensure that each page displays in the correct order, you should set the front-matter
+variable `order` to be equal to the page's position within its subsection.  For example,
+section 4 and section 2.4 should both have an order of 4.
+
+Additionally, you should set the front-matter variable `sort_by = "order"` in any 
+section your create.
+
+Finally, you should create an `_index.md` file and set two variables in its front matter:
+ *  set `sort_by = "order"`
+ *  set the `redirect_to` to redirect to the first section of your content.  For example,
+ if your first section has the slug `introduction`, then you would set `redirect_to =
+ "introduction"`.
+
 ## Options
 
 ### Numbered chapters
