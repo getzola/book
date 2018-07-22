@@ -26,18 +26,20 @@ theme = "book"
 ```
 
 ## Usage
-To ensure that each page displays in the correct order, you should set the front-matter
-variable `order` to be equal to the page's position within its subsection.  For example,
-section 4 and section 2.4 should both have an order of 4.
+Book will generate a book from the files you place in the `content` directory.  Your book
+can have two levels of hierarchy: chapters and subchapters.
 
-Additionally, you should set the front-matter variable `sort_by = "order"` in any 
-section your create.
+Each chapter should be a `section` within the Gutenberg site and should have an `_index.md`
+file that sets its `weight` front-matter variable to its chapter number.  For example,
+chapter 2 should have `weight = 2`.  Additionally, each chapter should also set the 
+`sort_by = "order"` in its front matter.
 
-Finally, you should create an `_index.md` file and set two variables in its front matter:
- *  set `sort_by = "order"`
- *  set the `redirect_to` to redirect to the first section of your content.  For example,
- if your first section has the slug `introduction`, then you would set `redirect_to =
- "introduction"`.
+Each subchapter should be a `page` and should have its `order` variable set to the subchapter
+number.  For example, subchapter 3.4 should have `order = 4`.
+
+Finally, you should create an `_index.md` file and set the `redirect_to` front-matter variable
+to redirect to the first section of your content.  For example, if your first section has the
+slug `introduction`, then you would set `redirect_to = "introduction"`.
 
 ## Options
 
