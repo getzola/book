@@ -23,6 +23,8 @@ and then enable it in your `config.toml`:
 
 ```toml
 theme = "book"
+# Optional, if you want search
+build_search_index = true
 ```
 
 ## Usage

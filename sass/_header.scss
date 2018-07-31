@@ -142,4 +142,19 @@
       }
     }
   }
+
+  .search-icon {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 2rem;
+
+    &:hover {
+      color: black
+    }
+  }
 }

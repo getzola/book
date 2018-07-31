@@ -3,6 +3,7 @@ compile_sass = true
 title = "book theme"
 description = "A book theme"
 highlight_code = true
+build_search_index = false
 
 [extra]
 book_number_chapters = true
