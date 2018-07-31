@@ -1,6 +1,6 @@
 +++
 title = "Page 2"
-order = 2
+weight = 2
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar, sem id fermentum sollicitudin, velit sem elementum nisl, at tempus odio lectus eu sapien. Quisque ligula diam, cursus sed nisi et, ultricies rhoncus diam. Integer nec tellus a ante dapibus tincidunt nec id lacus. Quisque eu aliquet dui. Etiam placerat, ex in luctus lobortis, sem augue pellentesque nulla, in gravida lacus dui id arcu. Nam vel metus a ipsum condimentum porta non quis purus. Nullam feugiat vitae felis eu imperdiet. Sed et faucibus ligula.

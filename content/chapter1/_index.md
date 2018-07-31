@@ -1,7 +1,7 @@
 +++
 title = "Introduction"
 weight = 1
-sort_by = "order"
+sort_by = "weight"
 insert_anchor_links = "right"
 +++
 
