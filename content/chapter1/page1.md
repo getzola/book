@@ -1,6 +1,6 @@
 +++
 title = "Page 1"
-weight = 1
+order = 1
 +++
 
 Pages and sections are actually very similar.
