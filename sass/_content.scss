@@ -171,3 +171,47 @@
     left: 0;
   }
 }
+
+.search-container {
+  display: none;
+
+  &--is-visible {
+    display: block;
+  }
+
+  #search {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #fafafa;
+    color: #000;
+  }
+
+  .search-results {
+    &__header {
+      font-weight: bold;
+      padding: 1rem 0rem;
+    }
+
+    &__items {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item {
+      margin-bottom: 1rem;
+    }
+
+    &__teaser {
+      font-size: 90%;
+    }
+  }
+}
+
+.search-mode {
+  .prev-link, .next-link {
+    display: none;
+  }
+}

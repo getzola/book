@@ -63,22 +63,44 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                  </div>
+                </div>
+                {% if config.build_search_index %}
+                <span class="search-icon">🔎</span>
+                {% endif %}
             </div>
 
             <div class="page__content">
-                {% block content %}
-                {% endblock content %}
+                {% if config.build_search_index %}
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="book-content">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
             </div>
 
-            {% block prev_link %}
-            {% endblock prev_link %}
+            <div class="prev-link">
+                {% block prev_link %}
+                {% endblock prev_link %}
+            </div>
 
-            {% block next_link %}
-            {% endblock next_link %}
+            <div class="next-link">
+                {% block next_link %}
+                {% endblock next_link %}
+            </div>
         </div>
 
         {% block js_body %}
+            {% if config.build_search_index %}
+            <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js", trailing_slash=false) }}"></script>
+            <script type="text/javascript" src="{{ get_url(path="search_index.en.js", trailing_slash=false) }}"></script>
+            {% endif %}
             <script type="text/javascript" src="{{ get_url(path="book.js", trailing_slash=false) }}"></script>
         {% endblock js_body %}
     </body>
