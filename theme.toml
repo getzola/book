@@ -2,7 +2,7 @@ name = "book"
 description = "A book theme inspired from GitBook/mdBook"
 license = "MIT"
 homepage = "https://github.com/Keats/book"
-min_version = "0.2"
+min_version = "0.4.0"
 
 [extra]
 book_number_chapters = true

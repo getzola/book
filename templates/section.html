@@ -16,7 +16,7 @@
         {% else %}
             {% if found_current %}
                 {% if subsection.pages %}
-                    {% set last_page = subsection.pages | first %}
+                    {% set last_page = subsection.pages | last %}
                     <a class="previous" href="{{ last_page.permalink }}"><</a>
                 {% else %}
                     <a class="previous" href="{{ subsection.permalink }}"><</a>
@@ -30,7 +30,7 @@
 
 {% block next_link %}
     {% if section.pages %}
-        {% set next_page = section.pages | last %}
+        {% set next_page = section.pages | first %}
         <a class="next" href="{{ next_page.permalink }}">></a>
     {% else %}
         {# No page in the section, find the link for the following section #}
