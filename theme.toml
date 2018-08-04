@@ -3,6 +3,7 @@ description = "A book theme inspired from GitBook/mdBook"
 license = "MIT"
 homepage = "https://github.com/Keats/book"
 min_version = "0.4.0"
+demo = "https://gutenberg-book.netlify.com"
 
 [extra]
 book_number_chapters = true
