@@ -14,7 +14,7 @@
 
       <!-- CSS -->
       {% block css %}
-      <link rel="stylesheet" href="{{ get_url(path="book.css", trailing_slash=false) }}">
+      <link rel="stylesheet" href="{{ get_url(path="book.css", trailing_slash=false) | safe }}">
       {% endblock css %}
 
       {% block extra_head %}
@@ -98,10 +98,10 @@
 
         {% block js_body %}
             {% if config.build_search_index %}
-            <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js", trailing_slash=false) }}"></script>
-            <script type="text/javascript" src="{{ get_url(path="search_index.en.js", trailing_slash=false) }}"></script>
+            <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js", trailing_slash=false) | safe }}"></script>
+            <script type="text/javascript" src="{{ get_url(path="search_index.en.js", trailing_slash=false) | safe }}"></script>
             {% endif %}
-            <script type="text/javascript" src="{{ get_url(path="book.js", trailing_slash=false) }}"></script>
+            <script type="text/javascript" src="{{ get_url(path="book.js", trailing_slash=false) | safe }}"></script>
         {% endblock js_body %}
     </body>
 
