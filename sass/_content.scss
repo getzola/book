@@ -131,6 +131,7 @@
   .previous {
     left: $sidebar-width;
     float: left;
+    transition: left 0.5s;
   }
 
   .next {
@@ -163,6 +164,10 @@
 .page-without-menu {
   width: 100%;
   left: 0;
+
+  .previous {
+    left: 15px;
+  }
 }
 
 @include max-screen(600px) {
