@@ -17,7 +17,7 @@ First download this theme to your `themes` directory:
 
 ```bash
 $ cd themes
-$ git clone https://github.com/Keats/book.git
+$ git clone https://github.com/getzola/book.git
 ```
 and then enable it in your `config.toml`:
 
