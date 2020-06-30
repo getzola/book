@@ -47,7 +47,7 @@ slug `introduction`, then you would set `redirect_to = "introduction"`.
 
 ### Numbered chapters
 By default, the `book` theme will number the chapters and pages in the left menu.
-You can disable that by setting the `book_numbered_chapters` in `extra`:
+You can disable that by setting the `book_number_chapters` in `extra`:
 
 ```toml
 book_number_chapters = false
