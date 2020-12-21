@@ -45,6 +45,12 @@
 
 @include max-screen(600px) {
   .menu {
+    width: calc(100% - 100px);
+    z-index: 1;
+  }
+
+  .menu-hidden {
     width: 0;
+    z-index: 0;
   }
 }
