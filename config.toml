@@ -1,4 +1,4 @@
-base_url = "https://zola-book.netlify.com"
+base_url = "https://zola-book.netlify.app"
 compile_sass = true
 title = "book theme"
 description = "A book theme"
