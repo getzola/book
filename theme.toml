@@ -3,7 +3,7 @@ description = "A book theme inspired from GitBook/mdBook"
 license = "MIT"
 homepage = "https://github.com/getzola/book"
 min_version = "0.16.0"
-demo = "https://zola-book.netlify.com"
+demo = "https://zola-book.netlify.app"
 
 [extra]
 book_number_chapters = true
