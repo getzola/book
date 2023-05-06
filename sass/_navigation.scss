@@ -1,3 +1,4 @@
+@use "variables";
 .menu {
   height: 100%;
   position: absolute;
@@ -43,7 +44,7 @@
   width: 0;
 }
 
-@include max-screen(600px) {
+@include variables.max-screen(600px) {
   .menu {
     width: calc(100% - 100px);
     z-index: 1;
