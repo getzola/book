@@ -18,9 +18,9 @@
             {% if found_current %}
                 {% if subsection.pages %}
                     {% set last_page = subsection.pages | last %}
-                    <a class="previous" href="{{ last_page.permalink }}"><</a>
+                    <a class="previous" href="{{ last_page.permalink | safe }}"><</a>
                 {% else %}
-                    <a class="previous" href="{{ subsection.permalink }}"><</a>
+                    <a class="previous" href="{{ subsection.permalink | safe }}"><</a>
                 {% endif %}
                 {# no break #}
                 {% set_global found_current = false %}
@@ -32,7 +32,7 @@
 {% block next_link %}
     {% if section.pages %}
         {% set next_page = section.pages | first %}
-        <a class="next" href="{{ next_page.permalink }}">></a>
+        <a class="next" href="{{ next_page.permalink | safe }}">></a>
     {% else %}
         {# No page in the section, find the link for the following section #}
         {% set index = get_section(path="_index.md") %}
@@ -40,7 +40,7 @@
         {% for s in index.subsections %}
             {% set subsection = get_section(path=s) %}
             {% if found_current %}
-                <a class="next" href="{{ subsection.permalink }}">></a>
+                <a class="next" href="{{ subsection.permalink | safe }}">></a>
                 {# no break #}
                 {% set_global found_current = false %}
             {% endif %}

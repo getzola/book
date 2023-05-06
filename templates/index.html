@@ -5,7 +5,16 @@
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
       <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page %}
+      {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+      {% elif config.description %}
+      <meta name="description" content="{{ config.description }}" />
+      {% endif %}
+    {% elif config.description %}
+      <meta name="description" content="{{ config.description }}" />
+    {% endif %}
 
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
@@ -33,7 +42,7 @@
                             {% set subsection = get_section(path=s) %}
                             <li {% if current_path == subsection.path %}class="active"{% endif %}>
                                 {% set chapter_num = loop.index %}
-                                <a href="{{ subsection.permalink }}">
+                                <a href="{{ subsection.permalink | safe }}">
                                     {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.</strong>{% endif %}
                                     {{ subsection.title }}
                                 </a>
@@ -41,7 +50,7 @@
                                     <ul>
                                         {% for page in subsection.pages %}
                                             <li {% if current_path == page.path %}class="active"{% endif %}>
-                                                <a href="{{ page.permalink }}">
+                                                <a href="{{ page.permalink | safe }}">
                                                     {% if config.extra.book_number_chapters %}<strong>{{ chapter_num }}.{{ loop.index }}.</strong>{% endif %}
                                                     {{ page.title }}
                                                 </a>
