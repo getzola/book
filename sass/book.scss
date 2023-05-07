@@ -8,5 +8,5 @@
 @use "content";
 @use "header";
 
-@use "syntax-charcoal" as syntax;
+@use "syntax" as syntax;
 @include syntax.light;
