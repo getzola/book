@@ -1,6 +1,7 @@
+@use "variables";
 .page {
   position: absolute;
-  width: calc(100% - #{$sidebar-width});
+  width: calc(100% - #{variables.$sidebar-width});
   height: 100%;
   overflow-y: auto;
   color: #000;
@@ -133,7 +134,7 @@
   }
 
   .previous {
-    left: $sidebar-width;
+    left: variables.$sidebar-width;
     float: left;
     transition: left 0.5s;
   }
@@ -144,7 +145,7 @@
     float: right;
   }
 
-  @include max-screen(1250px) {
+  @include variables.max-screen(1250px) {
     .previous, .next {
       position: static;
       top: auto;
@@ -159,9 +160,9 @@
   }
 }
 
-@include min-screen(600px) {
+@include variables.min-screen(600px) {
   .page {
-    left: $sidebar-width;
+    left: variables.$sidebar-width;
   }
 }
 
@@ -174,7 +175,7 @@
   }
 }
 
-@include max-screen(600px) {
+@include variables.max-screen(600px) {
   .page {
     width: 100%;
     left: calc(100% - 100px);
