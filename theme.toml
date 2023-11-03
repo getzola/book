@@ -1,13 +1,13 @@
-name = "book"
-description = "A book theme inspired from GitBook/mdBook"
+name = "Zola Book"
+description = "A book theme for Zola inspired from GitBook/mdBook."
 license = "MIT"
-homepage = "https://github.com/getzola/book"
-min_version = "0.17.0"
-demo = "https://getzola.github.io/book/"
+homepage = "https://github.com/semanticdata/book"
+min_version = "0.17.2"
+demo = "https://semanticdata.github.io/zola-book"
 
 [extra]
 book_number_chapters = true
 
 [author]
-name = "Vincent Prouillet"
-homepage = "https://www.vincentprouillet.com"
+name = "Miguel Pimentel"
+homepage = "https://miguelpimentel.do"

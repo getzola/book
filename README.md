@@ -8,6 +8,10 @@
 
 # Zola Book
 
+## Features and Improvements
+
+* Created PR [#25](https://github.com/getzola/book/pull/25) to address issue [#18](https://github.com/getzola/book/issues/18). Menu is hidden by default when accessing the site from a mobile phone.
+
 ## Requirements
 
 Before using the theme, you need to install [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ 0.17.2.
