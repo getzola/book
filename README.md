@@ -1,54 +1,65 @@
-# book
+<p align="right">
+  <img src="https://img.shields.io/github/languages/code-size/semanticdata/zola-book" />
+  <img src="https://img.shields.io/github/repo-size/semanticdata/zola-book" />
+  <img src="https://img.shields.io/github/commit-activity/t/semanticdata/zola-book" />
+  <img src="https://img.shields.io/github/last-commit/semanticdata/zola-book" />
+  <img src="https://img.shields.io/website/https/semanticdata.github.io/zola-book.svg" />
+</p>
 
-A theme based on [Gitbook](https://www.gitbook.com), to write documentation
-or books.
+# Zola Book
 
-![book screenshot](https://github.com/Keats/book/blob/master/screenshot.png?raw=true)
+## Requirements
 
+Before using the theme, you need to install [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ 0.17.2.
 
-## Contents
-
-- [Installation](#installation)
-- [Options](#options)
-  - [Numbered chapters](#numbered-chapters)
-
-## Installation
-First download this theme to your `themes` directory:
+## Quick Start
 
 ```bash
-$ cd themes
-$ git clone https://github.com/getzola/book.git
-```
-and then enable it in your `config.toml`:
-
-```toml
-theme = "book"
-# Optional, if you want search
-build_search_index = true
+git clone git@github.com:semanticdata/mabuya.git
+cd mabuya
+zola serve
+# open http://127.0.0.1:1111/ in the browser
 ```
 
-## Usage
-Book will generate a book from the files you place in the `content` directory.  Your book
-can have two levels of hierarchy: chapters and subchapters.
+## Customization
 
-Each chapter should be a `section` within the Gutenberg site and should have an `_index.md`
-file that sets its `weight` front-matter variable to its chapter number.  For example,
-chapter 2 should have `weight = 2`.  Additionally, each chapter should also set the
-`sort_by = "weight"` in its front matter.
+You can changed the configuration, templates and content yourself. Refer to the `config.toml`, and templates files for an idea.
 
-Each subchapter should be a `page` and should have its `weight` variable set to the subchapter
-number.  For example, subchapter 3.4 should have `weight = 4`.
+In most cases you only need to modify the contents of `config.toml` to
+customize the appearance of your blog.
 
-Finally, you should create an `_index.md` file and set the `redirect_to` front-matter variable
-to redirect to the first section of your content.  For example, if your first section has the
-slug `introduction`, then you would set `redirect_to = "introduction"`.
+### Custom CSS Styles
 
-## Options
+Adding custom CSS is as easy as adding your styles to `sass/_custom.scss. This is made possible because SCSS files are backwards compatible with CSS3. This means you can type normal CSS code into a SCSS file and it will be valid.
 
-### Numbered chapters
-By default, the `book` theme will number the chapters and pages in the left menu.
-You can disable that by setting the `book_number_chapters` in `extra`:
+## Useful Commands
 
-```toml
-book_number_chapters = false
-```
+A short list of commands that will help you develop your own version of the theme.
+
+| Command                    | Description                |
+| -------------------------- | -------------------------- |
+| `zola build`               | Build only                 |
+| `zola serve`               | Build and Serve            |
+
+## Reporting Issues
+
+We use GitHub Issues as the official bug tracker for **Mabuya**. Please
+search [existing issues](https://github.com/semanticdata/mabuya/issues). It’s
+possible someone has already reported the same problem.
+
+If your problem or idea is not addressed yet, [open a new issue](https://github.com/semanticdata/mabuya/issues/new).
+
+## Contributing
+
+We'd love your help! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) to learn
+about the kinds of contributions we're looking for.
+
+## Acknowledgements and Attributions
+
+Mabuya is a fork of [Tale](https://github.com/aaranxu/tale-zola), which is a port of the Jekyll theme [Tale](https://github.com/chesterhow/tale).
+
+The icons used throughout the site are kindly provided by [UXWing](https://uxwing.com/license/). Pay them a visit, maybe you'll get inspired and what not.
+
+## License
+
+Source code in this repository is available under the [MIT](LICENSE) license. You are free to use this code however you see fit. That said, some acknowledgement would be well received.
