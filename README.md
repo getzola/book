@@ -8,9 +8,16 @@
 
 # Zola Book
 
+A book theme for Zola inspired from GitBook/mdBook.
+
 ## Features and Improvements
 
-* Created PR [#25](https://github.com/getzola/book/pull/25) to address issue [#18](https://github.com/getzola/book/issues/18). Menu is hidden by default when accessing the site from a mobile phone.
+* Menu is hidden by default when accessing the site from a mobile phone. I created PR [#25](https://github.com/getzola/book/pull/25) to address issue [#18](https://github.com/getzola/book/issues/18).
+* Added `vercel.json`, and `netlify.toml` to help when deploying the site.
+* Added additional options in the `config.toml`.
+* Added meta GitHub items such as: workflows, git attributes, git ignore.
+* Temporarily swapped the original contents with Zola's and Tera's Documentation.
+* Removed custom synthax highlighting theme. Now uses `base16-ocean-light`.
 
 ## Requirements
 

@@ -16,7 +16,7 @@ highlight_theme = "base16-ocean-light"
 external_links_target_blank = true
 
 [extra]
-book_number_chapters = true
+book_number_chapters = false
 
 [search]
 include_title = true

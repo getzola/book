@@ -53,7 +53,7 @@
 
     blockquote {
       margin: 0;
-      margin-bottom: .85em;
+      margin-bottom: 0.85em;
       padding: 0 15px;
       color: #858585;
       border-left: 4px solid #e5e5e5;
@@ -112,7 +112,8 @@
     }
   }
 
-  .previous, .next {
+  .previous,
+  .next {
     position: fixed;
     display: flex;
     top: 50px;
@@ -146,7 +147,8 @@
   }
 
   @include variables.max-screen(1250px) {
-    .previous, .next {
+    .previous,
+    .next {
       position: static;
       top: auto;
       display: inline-block;
@@ -180,7 +182,7 @@
     width: 100%;
     left: 0;
   }
-  
+
   .page-without-menu {
     left: calc(100% - 100px);
   }
@@ -225,7 +227,8 @@
 }
 
 .search-mode {
-  .prev-link, .next-link {
+  .prev-link,
+  .next-link {
     display: none;
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: index
-# insert_anchor_links: right
 redirect_to: getting-started/overview
+insert_anchor_links: right
 ---
 
 ## An easy way to create a document library for your project
