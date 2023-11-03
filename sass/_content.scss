@@ -178,11 +178,11 @@
 @include variables.max-screen(600px) {
   .page {
     width: 100%;
-    left: calc(100% - 100px);
-  }
-
-  .page-without-menu {
     left: 0;
+  }
+  
+  .page-without-menu {
+    left: calc(100% - 100px);
   }
 }
 
