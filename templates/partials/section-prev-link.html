@@ -1,0 +1,21 @@
+    {# need to find the last page of the previous section or the previous section directly
+     if there isn't any pages in it #}
+     {% set index = get_section(path="_index.md") %}
+     {% set found_current = false %}
+     {% for s in index.subsections | reverse %}
+         {% set subsection = get_section(path=s) %}
+         {% if subsection.permalink == section.permalink %}
+             {% set_global found_current = true %}
+         {% else %}
+             {% if found_current %}
+                 {% if subsection.pages %}
+                     {% set last_page = subsection.pages | last %}
+                     <a class="previous" href="{{ last_page.permalink | safe }}"><</a>
+                 {% else %}
+                     <a class="previous" href="{{ subsection.permalink | safe }}"><</a>
+                 {% endif %}
+                 {# no break #}
+                 {% set_global found_current = false %}
+             {% endif %}
+         {% endif %}
+     {% endfor %}

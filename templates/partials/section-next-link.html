@@ -1,0 +1,19 @@
+{% if section.pages %}
+{% set next_page = section.pages | first %}
+<a class="next" href="{{ next_page.permalink | safe }}">></a>
+{% else %}
+{# No page in the section, find the link for the following section #}
+{% set index = get_section(path="_index.md") %}
+{% set found_current = false %}
+{% for s in index.subsections %}
+    {% set subsection = get_section(path=s) %}
+    {% if found_current %}
+        <a class="next" href="{{ subsection.permalink | safe }}">></a>
+        {# no break #}
+        {% set_global found_current = false %}
+    {% endif %}
+    {% if subsection.permalink == section.permalink %}
+        {% set_global found_current = true %}
+    {% endif %}
+{% endfor %}
+{% endif %}
