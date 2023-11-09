@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+      <meta name="description" content="A book theme" />
+      
+    
+
+      <title>book theme</title>
+
+      
+      
+
+      <!-- CSS -->
+      
+      <link rel="stylesheet" href="https://getzola.github.io/book/book.css">
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="menu">
+            
+            
+            <nav role="navigation">
+                <ul>
+                    
+                        
+                        
+                            
+                            <li >
+                                
+                                <a href="https://getzola.github.io/book/chapter1/">
+                                    <strong>1.</strong>
+                                    Introduction
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li class="active">
+                                                <a href="https://getzola.github.io/book/chapter1/page1/">
+                                                    <strong>1.1.</strong>
+                                                    Page 1
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https://getzola.github.io/book/chapter1/page2/">
+                                                    <strong>1.2.</strong>
+                                                    Page 2
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https://getzola.github.io/book/chapter2/">
+                                    <strong>2.</strong>
+                                    What is Gutenberg
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https://getzola.github.io/book/chapter2/page1/">
+                                                    <strong>2.1.</strong>
+                                                    Page 1
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https://getzola.github.io/book/chapter3/">
+                                    <strong>3.</strong>
+                                    Chapter 3
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https://getzola.github.io/book/chapter3/page1/">
+                                                    <strong>3.1.</strong>
+                                                    Page 1
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https://getzola.github.io/book/chapter3/page2/">
+                                                    <strong>3.2.</strong>
+                                                    Page 2
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https://getzola.github.io/book/chapter4/">
+                                    <strong>4.</strong>
+                                    A chapter without sub-parts
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https://getzola.github.io/book/chapter5/">
+                                    <strong>5.</strong>
+                                    Another chapter without sub-parts
+                                </a>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Page 1</h1>
+    <p>Pages and sections are actually very similar.</p>
+<h2 id="page-variables">Page variables<a class="zola-anchor" href="#page-variables" aria-label="Anchor link for: page-variables">🔗</a></h2>
+<p>Gutenberg will try to load the <code>templates/page.html</code> template, the <code>page.html</code> template of the theme if one is used
+or will render the built-in template: a blank page.</p>
+<p>Whichever template you decide to render, you will get a <code>page</code> variable in your template
+with the following fields:</p>
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-entity z-name z-label z-ts">content</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">title</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">description</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">date</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">slug</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">path</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">permalink</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">summary</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">tags</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Array</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">category</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">extra</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-variable z-other z-readwrite z-ts">HashMap</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-variable z-other z-readwrite z-ts">Any</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Naive word count, will not work for languages without whitespace</span>
+<span class="z-entity z-name z-label z-ts">word_count</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Number</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Based on https://help.medium.com/hc/en-us/articles/214991667-Read-time</span>
+<span class="z-entity z-name z-label z-ts">reading_time</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Number</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> `previous` and `next` are only filled if the content can be sorted</span>
+<span class="z-entity z-name z-label z-ts">previous</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-variable z-other z-readwrite z-ts">Page</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">next</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-variable z-other z-readwrite z-ts">Page</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> See the Table of contents section below for more details</span>
+<span class="z-variable z-other z-readwrite z-ts">toc</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Array</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-variable z-other z-readwrite z-ts">Header</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<h2 id="section-variables">Section variables<a class="zola-anchor" href="#section-variables" aria-label="Anchor link for: section-variables">🔗</a></h2>
+<p>By default, Gutenberg will try to load <code>templates/section.html</code>. If there isn't
+one, it will render the built-in template: a blank page.</p>
+<p>Whichever template you decide to render, you will get a <code>section</code> variable in your template
+with the following fields:</p>
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-entity z-name z-label z-ts">content</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">title</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">description</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">date</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-keyword z-operator z-ternary z-ts">?</span>;
+<span class="z-variable z-other z-readwrite z-ts">slug</span><span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">path</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">permalink</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-entity z-name z-label z-ts">extra</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-variable z-other z-readwrite z-ts">HashMap</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-variable z-other z-readwrite z-ts">Any</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Pages directly in this section, sorted if asked</span>
+<span class="z-entity z-name z-label z-ts">pages</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Array</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-variable z-other z-readwrite z-ts">Pages</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Direct subsections to this section, sorted by subsections weight</span>
+<span class="z-entity z-name z-label z-ts">subsections</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Array</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-variable z-other z-readwrite z-ts">Section</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Naive word count, will not work for languages without whitespace</span>
+<span class="z-entity z-name z-label z-ts">word_count</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Number</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Based on https://help.medium.com/hc/en-us/articles/214991667-Read-time</span>
+<span class="z-entity z-name z-label z-ts">reading_time</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Number</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> See the Table of contents section below for more details</span>
+<span class="z-entity z-name z-label z-ts">toc</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Array</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-variable z-other z-readwrite z-ts">Header</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<h2 id="table-of-contents">Table of contents<a class="zola-anchor" href="#table-of-contents" aria-label="Anchor link for: table-of-contents">🔗</a></h2>
+<p>Both page and section have a <code>toc</code> field which corresponds to an array of <code>Header</code>.
+A <code>Header</code> has the following fields:</p>
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> The hX level</span>
+<span class="z-entity z-name z-label z-ts">level</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-constant z-numeric z-decimal z-ts">1</span> <span class="z-keyword z-operator z-bitwise z-ts">|</span> <span class="z-constant z-numeric z-decimal z-ts">2</span> <span class="z-keyword z-operator z-bitwise z-ts">|</span> <span class="z-constant z-numeric z-decimal z-ts">3</span> <span class="z-keyword z-operator z-bitwise z-ts">|</span> <span class="z-constant z-numeric z-decimal z-ts">4</span> <span class="z-keyword z-operator z-bitwise z-ts">|</span> <span class="z-constant z-numeric z-decimal z-ts">5</span> <span class="z-keyword z-operator z-bitwise z-ts">|</span> <span class="z-constant z-numeric z-decimal z-ts">6</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> The generated slug id</span>
+<span class="z-entity z-name z-label z-ts">id</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> The text of the header</span>
+<span class="z-entity z-name z-label z-ts">title</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> A link pointing directly to the header, using the inserted anchor</span>
+<span class="z-entity z-name z-label z-ts">permalink</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">String</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> All lower level headers below this header</span>
+<span class="z-entity z-name z-label z-ts">children</span><span class="z-punctuation z-separator z-label z-ts">:</span> <span class="z-support z-class z-builtin z-ts">Array</span><span class="z-keyword z-operator z-relational z-ts">&lt;</span><span class="z-variable z-other z-readwrite z-ts">Header</span><span class="z-keyword z-operator z-relational z-ts">&gt;</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        
+        
+        <a class="previous" href="https://getzola.github.io/book/chapter1/"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https://getzola.github.io/book/chapter1/page2/">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+            <script type="text/javascript" src="https://getzola.github.io/book/elasticlunr.min.js"></script>
+            <script type="text/javascript" src="https://getzola.github.io/book/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://getzola.github.io/book/book.js"></script>
+        
+    </body>
+
+</html>
