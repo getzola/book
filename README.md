@@ -52,3 +52,11 @@ You can disable that by setting the `book_number_chapters` in `extra`:
 ```toml
 book_number_chapters = false
 ```
+
+### Current section pages only
+By default, the `book` theme will list all the pages in the current section.
+You can disable that by setting the `book_current_section_pages` in `extra`:
+
+```toml
+book_current_section_pages = false
+```

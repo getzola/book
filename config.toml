@@ -10,3 +10,4 @@ highlight_theme = "css"
 
 [extra]
 book_number_chapters = true
+book_current_section_pages = false
