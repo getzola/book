@@ -55,12 +55,6 @@
                             {% endif %}
                         {% endfor %}
                         
-                        <!-- Debug info -->
-                        <!-- current_path: {{ current_path }} -->
-                        <!-- subsection.path: {{ subsection.path }} -->
-                        <!-- is_active: {{ is_active }} -->
-                        <!-- book_current_section_pages: {{ config.extra.book_current_section_pages }} -->
-                        
                         <li {% if is_active %}class="active"{% endif %}>
                             {% set chapter_num = loop.index %}
                             <a href="{{ subsection.permalink | safe }}">
@@ -68,8 +62,8 @@
                                 {{ subsection.title }}
                             </a>
                 
-                            {# Show pages if book_current_section_pages is false OR if this is the current subsection #}
-                            {% if subsection.pages and (not config.extra.book_current_section_pages or current_path == subsection.path or subsection.pages | filter(attribute="path", value=current_path) | length > 0) %}
+                            {# Show pages if book_only_current_section_pages is false OR if this is the current subsection #}
+                            {% if subsection.pages and (not config.extra.book_only_current_section_pages or current_path == subsection.path or subsection.pages | filter(attribute="path", value=current_path) | length > 0) %}
                                 <ul>
                                     {% for page in subsection.pages %}
                                         <li {% if current_path == page.path %}class="active"{% endif %}>
