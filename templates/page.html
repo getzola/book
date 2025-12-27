@@ -7,8 +7,8 @@
 {% endblock content %}
 
 {% block prev_link %}
-    {% if page.smaller %}
-        <a class="previous" href="{{ page.smaller.permalink | safe }}"><</a>
+    {% if page.lower %}
+        <a class="previous" href="{{ page.lower.permalink | safe }}"><</a>
     {% else %}
         {# No page before, find the link for the section it's in if there is one #}
         {% set parent = get_section(path=page.ancestors | reverse | first) %}
