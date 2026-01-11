@@ -7,6 +7,3 @@
 @use "navigation";
 @use "content";
 @use "header";
-
-@use "syntax" as syntax;
-@include syntax.light;

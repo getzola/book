@@ -5,6 +5,7 @@ or books.
 
 ![book screenshot](https://github.com/Keats/book/blob/master/screenshot.png?raw=true)
 
+Demo: https://getzola.github.io/book/
 
 ## Contents
 
